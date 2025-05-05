@@ -50,12 +50,12 @@ export default function Nav() {
 }, [location.pathname]);
 
   return (
-    <nav className="bg-cover bg-center bg-no-repeat md:bg-zinc-700 text-sm relative transition-colors duration-300"
+    <nav className="sticky top-0 z-40 bg-cover bg-center bg-no-repeat md:bg-zinc-700 text-sm relative transition-colors duration-300"
     style={bgStyle}
     >
       <div className="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between md:justify-center relative bg-zinc-900/30">
         {/* Band name: only visible on md and smaller */}
-        <div className="block md:hidden text-white font-bold text-lg drop-shadow-sm">
+        <div className="block md:hidden text-white font-bold text-2xl drop-shadow-sm">
           Sindikat Sina Roza
         </div>
 
@@ -92,7 +92,7 @@ export default function Nav() {
         {/* Hamburger toggle: only visible on mobile, floats right */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden text-white drop-shadow-sm absolute right-4 z-50"
+          className="md:hidden text-white  text-3xl px-3 drop-shadow-sm absolute right-4 z-50"
           aria-label="Toggle menu"
         >
           {menuOpen ? '✕' : '☰'}
