@@ -25,6 +25,21 @@ export default function Contact() {
           contact@sinarozabrass.band
         </a>
       </div>
+
+      {/* Press Kit */}
+      <section>
+        <h2 className="text-2xl font-bold text-white mb-4">Press Kit</h2>
+        <p className="text-zinc-300 mb-2">
+          Download our press materials, including high-res photos, logo, and band bio.
+        </p>
+        <a
+          href="/public/downloads/SindikatSinaRoza_PressKit.zip"
+          download
+          className="inline-block mt-2 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded"
+        >
+          Download Press Kit
+        </a>
+      </section>
     </motion.div>
   );
 }
