@@ -35,7 +35,11 @@ export default function Calendar() {
 
         }).sort((a, b) => a.start - b.start);
 
-        setEvents(parsedEvents);
+        setEvents(
+          parsedEvents
+          .filter(event => event.start > Date.now())
+          .sort((a, b) => a.start - b.start)
+          );
       } catch (err) {
         setError('Failed to load calendar events.');
         console.error(err);
