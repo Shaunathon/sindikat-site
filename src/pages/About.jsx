@@ -57,7 +57,11 @@ export default function About() {
           {members.map((member) => (
             <div key={member.name} className="bg-zinc-800 p-6 rounded-lg shadow text-center flex flex-col items-center">
               <img
-                src={"/images/default-avatar.png"}
+                src={`/images/${member.name?.split(' ')[0]?.toLowerCase()}.jpg`}
+                onError={(e) => {
+                 e.target.onerror = null;
+                 e.target.src = '/images/default-avatar.png';
+                }}
                 alt={member.name}
                 className="w-32 h-32 min-w-0 rounded-full object-cover mb-4"
               />

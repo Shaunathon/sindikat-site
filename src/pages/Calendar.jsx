@@ -69,9 +69,9 @@ export default function Calendar() {
             const dt = DateTime.fromJSDate(event.start);
 
             return (
-            <li key={index} className="bg-zinc-800 p-4 rounded shadow flex">
+            <li key={index} className="bg-secondary p-4 rounded shadow flex">
               
-              <div className="w-16 shrink-0 bg-zinc-700 text-center rounded-l flex flex-col justify-center items-center p-2">
+              <div className="w-16 shrink-0 bg-accent text-center rounded-l flex flex-col justify-center items-center p-2">
                 <div className="text-sm font-semibold text-zinc-300">{dt.toFormat('ccc')}</div>  {/* Sat */}
                 <div className="text-lg font-bold text-white">{dt.toFormat('LLL')}</div>          {/* Jun */}
                 <div className="text-2xl font-bold text-white">{dt.toFormat('d')}</div>            {/* 22 */}

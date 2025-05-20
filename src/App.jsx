@@ -10,7 +10,7 @@ import AnimatedRoutes from './components/AnimatedRoutes';
 function App() {
   return (
     <BrowserRouter>
-      <div className="bg-zinc-900 text-white min-h-screen font-sans">
+      <div className="bg-background text-white min-h-screen font-sans">
         <Header />
 
         <Nav />

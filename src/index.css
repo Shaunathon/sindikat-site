@@ -8,6 +8,57 @@
   border-radius: 4px;
 }
 
+:root {
+  --color-primary: #77CCEE; /* Custom Primary Color */
+  --color-secondary: #AEAEAE; /* Custom Secondary Color */
+  --color-background: #221111; /* Background Color */
+  --color-text: #FFFFFF; /* Text Color */
+  --color-accent: #00FFFF;
+
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Merriweather', serif;
+}
+
+/* Apply Global Styles */
+body {
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  background-color: var(--color-background);
+  line-height: 1.6;
+}
+
+/* Utility Classes (Tailwind Style) */
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-accent {
+  color: var(--color-accent);
+}
+
+.bg-secondary {
+  background-color: var(--color-secondary);
+}
+
+.text-secondary {
+  color: var(--color-secondary);
+}
+
+.bg-background {
+  background-color: var(--color-background);
+}
+
+.bg-accent {
+  background-color: var(--color-accent);
+}
+.text-text {
+  color: var(--color-text);
+}
+
 /*
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
