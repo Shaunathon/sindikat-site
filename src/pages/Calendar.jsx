@@ -57,7 +57,7 @@ export default function Calendar() {
       exit={{ opacity: 0, y: -10 }}
       transition={{ duration: 0.3 }}
     >
-      <h1 className="text-3xl font-bold text-white mb-6">Upcoming Gigs</h1>
+      <h1 className="text-3xl font-bold text-primary mb-6">Upcoming Gigs</h1>
 
       {error && <p className="text-red-400">{error}</p>}
 
@@ -72,7 +72,7 @@ export default function Calendar() {
             <li key={index} className="bg-secondary p-4 rounded shadow flex">
               
               <div className="w-16 shrink-0 bg-accent text-center rounded-l flex flex-col justify-center items-center p-2">
-                <div className="text-sm font-semibold text-zinc-300">{dt.toFormat('ccc')}</div>  {/* Sat */}
+                <div className="text-sm font-semibold text-white">{dt.toFormat('ccc')}</div>  {/* Sat */}
                 <div className="text-lg font-bold text-white">{dt.toFormat('LLL')}</div>          {/* Jun */}
                 <div className="text-2xl font-bold text-white">{dt.toFormat('d')}</div>            {/* 22 */}
               </div>

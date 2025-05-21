@@ -55,7 +55,7 @@ export default function About() {
         <h2 className="text-2xl font-bold text-primary mb-6 text-center">Members</h2>
         <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
           {members.map((member) => (
-            <div key={member.name} className="bg-zinc-800 p-6 rounded-lg shadow text-center flex flex-col items-center">
+            <div key={member.name} className="bg-secondary p-6 rounded-lg shadow text-center flex flex-col items-center">
               <img
                 src={`/images/${member.name?.split(' ')[0]?.toLowerCase()}.jpg`}
                 onError={(e) => {
@@ -77,7 +77,7 @@ export default function About() {
       {/* Other Bands Section */}
       <section>
         <h2 className="text-2xl font-bold text-primary mb-6 text-center">Other Bands We Love</h2>
-        <ul className="list-disc list-inside text-zinc-300 max-w-2xl mx-auto space-y-2">
+        <ul className="list-disc list-inside text-text max-w-2xl mx-auto space-y-2">
           {otherBands
             .filter(band => band.Name?.trim())
             .map((band, index) => (

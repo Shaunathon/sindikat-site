@@ -2,7 +2,7 @@
 
 export const bandSubtitle = (
   <>
-  Balkan Brass in the Pacific Northwest
+  Seattle's itchin' for a BRASS-kickin'!
   </>
   );
 

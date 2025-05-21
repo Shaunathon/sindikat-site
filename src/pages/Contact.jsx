@@ -10,12 +10,12 @@ export default function Contact() {
       exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.3 }}
     >
-      <h1 className="text-3xl font-bold text-white mb-4">Contact Us</h1>
-      <p className="text-zinc-300 mb-8">
+      <h1 className="text-3xl font-bold text-primary mb-4">Contact Us</h1>
+      <p className="text-text mb-8">
         Whether you're planning a festival, a wedding, or a wild Balkan-style street party — we’d love to hear from you!
       </p>
 
-      <div className="bg-zinc-800 p-6 rounded-lg shadow-md max-w-md">
+      <div className="bg-secondary p-6 rounded-lg shadow-md max-w-md">
         <h2 className="text-xl font-semibold text-white mb-2">Booking & Inquiries</h2>
         <p className="text-zinc-400 mb-1">Email us directly at:</p>
         <a
@@ -35,7 +35,7 @@ export default function Contact() {
         <a
           href="/public/downloads/SindikatSinaRoza_PressKit.zip"
           download
-          className="inline-block mt-2 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded"
+          className="inline-block mt-2 bg-accent hover:bg-blue-600 text-white py-2 px-4 rounded"
         >
           Download Press Kit
         </a>

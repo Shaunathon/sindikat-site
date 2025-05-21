@@ -71,15 +71,15 @@ export default function Library() {
 
   return (
     <div className="relative min-h-screen">
-      <motion.div className="p-10 bg-black min-h-screen backdrop-blur-none">
-        <h1 className="text-3xl font-bold text-white mb-6">Song Library</h1>
+      <motion.div className="p-10 bg-background min-h-screen backdrop-blur-none">
+        <h1 className="text-3xl font-bold text-primary mb-6">Song Library</h1>
 
         <input
           type="text"
           placeholder="Search by title or rhythm..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="w-full max-w-md mb-6 p-2 rounded bg-zinc-700 text-white border border-zinc-600"
+          className="w-full max-w-md mb-6 p-2 rounded bg-secondary text-white border border-zinc-600"
         />
         
         {(search || selectedNationalities.length > 0 || selectedMeters.length > 0) && (
@@ -115,7 +115,7 @@ export default function Library() {
 
         <ul className="mt-6 space-y-4 overflow-y-auto max-h-[60vh] pr-2 scrollbar-thin">
           {finalFiltered.map((song, idx) => (
-            <li key={idx} className="bg-zinc-800 p-4 rounded shadow text-white">
+            <li key={idx} className="bg-secondary p-4 rounded shadow text-white">
               <h2 className="text-xl font-semibold mb-1">{song.Song}</h2>
               <p className="text-sm text-zinc-400">
                 <strong>Nationality:</strong> {song.Nationality} <br />
