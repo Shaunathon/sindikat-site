@@ -44,15 +44,15 @@ export default function About() {
     >
       {/* About the Band */}
       <section>
-        <h1 className="text-3xl font-bold text-white mb-4">About the Band</h1>
-        <p className="text-zinc-300 max-w-2xl">{aboutText}
+        <h1 className="text-3xl font-bold text-primary mb-4">About the Band</h1>
+        <p className="text-text max-w-2xl">{aboutText}
           
         </p>
       </section>
 
       {/* Members Section */}
       <section>
-        <h2 className="text-2xl font-bold text-white mb-6 text-center">Members</h2>
+        <h2 className="text-2xl font-bold text-primary mb-6 text-center">Members</h2>
         <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
           {members.map((member) => (
             <div key={member.name} className="bg-zinc-800 p-6 rounded-lg shadow text-center flex flex-col items-center">
@@ -66,9 +66,9 @@ export default function About() {
                 className="w-32 h-32 min-w-0 rounded-full object-cover mb-4"
               />
 
-              <h3 className="text-lg font-semibold text-white">{member.name}</h3>
-              <p className="text-sm text-blue-400">{member.role}</p>
-              <p className="mt-2 text-zinc-400 text-sm">{member.bio}</p>
+              <h3 className="text-lg font-semibold text-secondary">{member.name}</h3>
+              <p className="text-sm text-primary">{member.role}</p>
+              <p className="mt-2 text-text text-sm">{member.bio}</p>
             </div>
           ))}
         </div>
@@ -76,7 +76,7 @@ export default function About() {
 
       {/* Other Bands Section */}
       <section>
-        <h2 className="text-2xl font-bold text-white mb-6 text-center">Other Bands We Love</h2>
+        <h2 className="text-2xl font-bold text-primary mb-6 text-center">Other Bands We Love</h2>
         <ul className="list-disc list-inside text-zinc-300 max-w-2xl mx-auto space-y-2">
           {otherBands
             .filter(band => band.Name?.trim())
