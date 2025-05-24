@@ -50,12 +50,12 @@ export default function Nav() {
 }, [location.pathname]);
 
   return (
-    <nav className="sticky top-0 z-40 bg-cover bg-center bg-no-repeat md:bg-zinc-700 text-sm relative transition-colors duration-300"
+    <nav className="sticky top-0 z-40 bg-cover bg-center bg-no-repeat md: bg-primary text-sm font-header relative transition-colors duration-300"
     style={bgStyle}
     >
       <div className="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between md:justify-center relative bg-zinc-900/30">
         {/* Band name: only visible on md and smaller */}
-        <div className="block md:hidden text-white font-bold text-2xl drop-shadow-sm">
+        <div className="block md:hidden text-primary font-bold text-xl drop-shadow-sm">
           Sindikat Sina Roza
         </div>
 
@@ -71,8 +71,8 @@ export default function Nav() {
                 to={to}
                 className={
                   location.pathname === to
-                    ? 'text-white font-semibold uppercase tracking-wide transition-all duration-300'
-                    : 'text-zinc-300 hover:text-white font-medium uppercase tracking-wide transition-all duration-300'
+                    ? 'text-xl text-accent font-header tracking-wide transition-all duration-300'
+                    : 'text-xl text-secondary hover:text-white font-medium uppercase tracking-wide transition-all duration-300'
                 }
               >
                 {label}
@@ -82,7 +82,7 @@ export default function Nav() {
 
           {/* Animated underline */}
           <motion.div
-            className="absolute bottom-0 h-0.5 bg-white rounded"
+            className="absolute bottom-0 h-0.5 bg-accent rounded"
             animate={{ left: underlineStyle.left, width: underlineStyle.width }}
             transition={underlineTransition}
           />

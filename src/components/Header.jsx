@@ -12,8 +12,8 @@ export default function Header() {
       style={{ backgroundImage: `url(${bgImage})` }}
     >
       <div className="bg-background backdrop-blur-xs inline-block px-6 py-4 rounded">
-        <h1 className="text-4xl text-primary font-bold tracking-wide">Sindikat Sina Roza</h1>
-        <p className="text-xl mt-2 text-secondary italic">{bandSubtitle}</p>
+        <h1 className="text-4xl text-white font-header tracking-wide">Sindikat Sina Roza</h1>
+        <p className="text-xl mt-2 text-accent font-body-bold-italic">{bandSubtitle}</p>
       </div>
     </header>
   );

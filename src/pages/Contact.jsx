@@ -10,17 +10,17 @@ export default function Contact() {
       exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.3 }}
     >
-      <h1 className="text-3xl font-bold text-primary mb-4">Contact Us</h1>
-      <p className="text-text mb-8">
+      <h1 className="text-4xl font-header text-accent mb-4">Contact Us</h1>
+      <p className="text-secondary font-body mb-8">
         Whether you're planning a festival, a wedding, or a wild Balkan-style street party — we’d love to hear from you!
       </p>
 
-      <div className="bg-secondary p-6 rounded-lg shadow-md max-w-md">
-        <h2 className="text-xl font-semibold text-white mb-2">Booking & Inquiries</h2>
-        <p className="text-zinc-400 mb-1">Email us directly at:</p>
+      <div className="bg-primary p-6 rounded-lg shadow-md max-w-md mb-12">
+        <h2 className="text-2xl font-body text-primary mb-2">Booking & Inquiries</h2>
+        <p className="text-secondary font-body mb-1">Email us directly at:</p>
         <a
           href="mailto:contact@sinarozabrass.band"
-          className="text-blue-400 underline break-words"
+          className="font-body text-blue-400 underline break-words"
         >
           contact@sinarozabrass.band
         </a>
@@ -28,14 +28,14 @@ export default function Contact() {
 
       {/* Press Kit */}
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">Press Kit</h2>
-        <p className="text-zinc-300 mb-2">
+        <h2 className="text-3xl font-header text-primary mb-4">Press Kit</h2>
+        <p className="text-secondary font-body mb-2">
           Download our press materials, including high-res photos, logo, and band bio.
         </p>
         <a
           href="/public/downloads/SindikatSinaRoza_PressKit.zip"
           download
-          className="inline-block mt-2 bg-accent hover:bg-blue-600 text-white py-2 px-4 rounded"
+          className="inline-block mt-2 bg-secondary hover:bg-primary text-primary font-bodsy py-2 px-4 rounded"
         >
           Download Press Kit
         </a>

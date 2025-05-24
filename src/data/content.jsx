@@ -2,7 +2,7 @@
 
 export const bandSubtitle = (
   <>
-  Seattle's itchin' for a BRASS-kickin'!
+  Seattle's itchin' for a BRASS-kickin'
   </>
   );
 

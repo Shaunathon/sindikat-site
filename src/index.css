@@ -9,59 +9,98 @@
 }
 
 :root {
-  --color-primary: #77CCEE; /* Custom Primary Color */
-  --color-secondary: #AEAEAE; /* Custom Secondary Color */
-  --color-background: #221111; /* Background Color */
-  --color-elevation: #3A3A3A;
-  --color-text: #BCBCBC; /* Text Color */
-  --color-accent: #DDAA33;
+  --color-black-dark: #050401;
+  --color-black: #2B2B31;
+  --color-blue-dark: #003C6E; /* Custom Primary Color */
+  --color-blue: #00648F; /* Custom Primary Color */
+  --color-yellow-dark: #9B7624; /* Custom Secondary Color */
+  --color-yellow: #DFAB29; /* Custom Secondary Color */
+  --color-background: #050401; /* Background Color */
+  --color-red-dark: #A03712;
+  --color-red: #D54514;
+  --color-cream-dark: #E2D5AC; /* Text Color */
+  --color-cream: #F4ECD1;
 
-  --font-sans: 'Inter', sans-serif;
-  --font-serif: 'Merriweather', serif;
+/*  --font-sans: 'Bebas Neue', sans-serif; 
+  --font-serif: 'PT Sans', serif;*/
 }
 
 /* Apply Global Styles */
 body {
   font-family: var(--font-sans);
-  color: var(--color-text);
-  background-color: var(--color-background);
+  color: var(--color-cream);
+  background-color: var(--color-black-dark);
   line-height: 1.6;
 }
 
 /* Utility Classes (Tailwind Style) */
 .bg-primary {
-  background-color: var(--color-primary);
+  background-color: var(--color-blue-dark);
 }
 
 .text-primary {
-  color: var(--color-primary);
+  color: var(--color-cream);
 }
 
 .text-accent {
-  color: var(--color-accent);
+  color: var(--color-yellow);
 }
 
 .bg-secondary {
-  background-color: var(--color-secondary);
+  background-color: var(--color-blue);
 }
 
 .text-secondary {
-  color: var(--color-secondary);
+  color: var(--color-cream-dark);
 }
 
 .bg-background {
-  background-color: var(--color-background);
+  background-color: var(--color-black-dark);
 }
 
-.bg-secondary {
-  background-color: var(--color-elevation);
+.bg-background-elev {
+  background-color: var(--color-black);
+}
+
+.border-accent {
+  background-color: var(--color-yellow);
 }
 
 .bg-accent {
-  background-color: var(--color-accent);
+  background-color: var(--color-yellow);
 }
 .text-text {
-  color: var(--color-text);
+  color: var(--color-cream-dark);
+}
+
+.font-body {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-body-bold {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.font-body-italic {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.font-body-bold-italic {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.font-header {
+  font-family: "Bebas Neue", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /*

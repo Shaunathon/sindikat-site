@@ -10,12 +10,8 @@ export default function Calendar() {
   useEffect(() => {
     async function fetchICS() {
       try {
-        //Below is the CorsProxy used for testing
-        //const corsProxy = 'https://api.allorigins.win/raw?url=';
         const icsUrl = 'https://www.gig-o-matic.com/band/calfeed/1b7e6b99-d08f-457a-9c84-8319714861d4';
         const res = await fetch(icsUrl);
-        //Below is part of the CorsProxy test
-        //const res = await fetch(`${corsProxy}${encodeURIComponent(icsUrl)}`);
         const text = await res.text();
 
 
@@ -57,7 +53,7 @@ export default function Calendar() {
       exit={{ opacity: 0, y: -10 }}
       transition={{ duration: 0.3 }}
     >
-      <h1 className="text-3xl font-bold text-primary mb-6">Upcoming Gigs</h1>
+      <h1 className="text-4xl font-header text-accent mb-6">Upcoming Gigs</h1>
 
       {error && <p className="text-red-400">{error}</p>}
 
@@ -69,21 +65,21 @@ export default function Calendar() {
             const dt = DateTime.fromJSDate(event.start);
 
             return (
-            <li key={index} className="bg-secondary p-4 rounded shadow flex">
+            <li key={index} className="bg-primary p-4 rounded shadow flex">
               
-              <div className="w-16 shrink-0 bg-accent text-center rounded-l flex flex-col justify-center items-center p-2">
-                <div className="text-sm font-semibold text-white">{dt.toFormat('ccc')}</div>  {/* Sat */}
-                <div className="text-lg font-bold text-white">{dt.toFormat('LLL')}</div>          {/* Jun */}
-                <div className="text-2xl font-bold text-white">{dt.toFormat('d')}</div>            {/* 22 */}
+              <div className="w-16 shrink-0 bg-secondary text-center rounded-l flex flex-col justify-center items-center p-2">
+                <div className="text-sm font-header text-accent">{dt.toFormat('ccc')}</div>  {/* Sat */}
+                <div className="text-2xl tracking-wide font-header text-primary">{dt.toFormat('LLL')}</div>          {/* Jun */}
+                <div className="text-2xl font-header text-primary">{dt.toFormat('d')}</div>            {/* 22 */}
               </div>
 
              <div className="flex-1 p-4">
-              <h2 className="text-xl font-semibold">{event.summary}</h2>
-              <p className="text-zinc-400 text-sm">
+              <h2 className="text-2xl text-primary font-header">{event.summary}</h2>
+              <p className="text-primary font-body text-sm">
                 {DateTime.fromJSDate(event.start).toFormat("h:mm a").toLowerCase()} – {DateTime.fromJSDate(event.end).toFormat("h:mm a").toLowerCase()}
               </p>
               {event.location && (
-                <address className="text-zinc-400 not-italic">
+                <address className="text-secondary font-body">
                   {/\d+/.test(event.location) ? (
                     <a
                       href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(event.location)}`}

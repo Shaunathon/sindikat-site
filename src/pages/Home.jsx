@@ -18,8 +18,8 @@ export default function Home() {
       className="w-100 h-auto rounded-lg mb-6 shadow-lg"
       />
 
-      <h1 className="self-start text-3xl font-bold text-primary">Welcome!</h1>
-      <p className="mt-2 text-text">{bandBio}</p>
+      <h1 className="self-start text-4xl font-header text-accent">Welcome!</h1>
+      <p className="mt-2 text-secondary font-body">{bandBio}</p>
     </motion.div>
   );
 }
