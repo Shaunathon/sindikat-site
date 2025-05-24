@@ -59,7 +59,7 @@ export default function Nav() {
       >
       {/* Mobile-only translucent overlay */}
         {isMobile && (
-        <div className="absolute inset-0 bg-zinc-900/85 z-0" />
+        <div className="absolute inset-0 bg-zinc-900/80 backdrop-brightness-100 z-0" />
         )}
 
         {/* Band name: only visible on md and smaller */}

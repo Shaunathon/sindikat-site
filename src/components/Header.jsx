@@ -8,13 +8,19 @@ export default function Header() {
   const bgImage = '/images/header-bg.png';
 
   return (
-    <header className="hidden md:block text-center py-10 bg-cover bg-center shadow-lg"
+    <header className="hidden md:block relative text-center py-10 bg-cover bg-center shadow-lg"
       style={{ backgroundImage: `url(${bgImage})` }}
     >
-      <div className="bg-background inline-block px-6 py-4 rounded-4xl">
-        <h2 className="text-3xl text-accent font-title mb-1">sindikat</h2>
-        <h1 className="text-6xl text-pop font-logo">Sina Roza</h1>
-        {/*<p className="text-xl mt-2 text-accent font-body-bold-italic">{bandSubtitle}</p>*/}
+      <div className="absolute inset-0 bg-white/35 backdrop-brightness-125 z-0" />
+
+      <div className="relative z-10 bg-[rgba(3,1,4,0.75)] backdrop-blur-xs inline-block px-6 py-4 rounded-4xl border-2 border-[var(--color-yellow)]">
+        <img
+          src="/images/blue-rose.png"
+          alt="blue rose"
+          className="absolute -top-21 -right-24 w-70 h-70 opacity-100 z-0 pointer-events-none"
+          />
+        <h2 className="text-3xl text-accent font-title mb-1 z-10 relative">sindikat</h2>
+        <h1 className="text-6xl text-pop font-logo z-10 relative">Sina Roza</h1>
       </div>
     </header>
   );

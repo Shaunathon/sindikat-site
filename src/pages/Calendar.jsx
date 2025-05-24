@@ -67,10 +67,10 @@ export default function Calendar() {
             return (
             <li key={index} className="bg-primary p-4 rounded shadow flex">
               
-              <div className="w-16 shrink-0 bg-secondary text-center rounded-l flex flex-col justify-center items-center p-2">
-                <div className="text-sm font-header text-accent">{dt.toFormat('ccc')}</div>  {/* Sat */}
-                <div className="text-2xl tracking-wide font-header text-pop">{dt.toFormat('LLL')}</div>          {/* Jun */}
-                <div className="text-2xl font-header text-pop">{dt.toFormat('d')}</div>            {/* 22 */}
+              <div className="w-16 shrink-0 bg-secondary text-center rounded-sm flex flex-col justify-center items-center p-2">
+                <div className="text-sm font-header text-pop">{dt.toFormat('ccc')}</div>  {/* Sat */}
+                <div className="text-2xl tracking-wide font-header text-accent">{dt.toFormat('LLL')}</div>          {/* Jun */}
+                <div className="text-2xl font-header text-accent">{dt.toFormat('d')}</div>            {/* 22 */}
               </div>
 
              <div className="flex-1 p-4">
