@@ -53,7 +53,7 @@ export default function Calendar() {
       exit={{ opacity: 0, y: -10 }}
       transition={{ duration: 0.3 }}
     >
-      <h1 className="text-4xl font-header text-accent mb-6">Upcoming Gigs</h1>
+      <h1 className="text-4xl font-header text-accent mb-6">Upcoming Shows</h1>
 
       {error && <p className="text-red-400">{error}</p>}
 
@@ -69,8 +69,8 @@ export default function Calendar() {
               
               <div className="w-16 shrink-0 bg-secondary text-center rounded-l flex flex-col justify-center items-center p-2">
                 <div className="text-sm font-header text-accent">{dt.toFormat('ccc')}</div>  {/* Sat */}
-                <div className="text-2xl tracking-wide font-header text-primary">{dt.toFormat('LLL')}</div>          {/* Jun */}
-                <div className="text-2xl font-header text-primary">{dt.toFormat('d')}</div>            {/* 22 */}
+                <div className="text-2xl tracking-wide font-header text-pop">{dt.toFormat('LLL')}</div>          {/* Jun */}
+                <div className="text-2xl font-header text-pop">{dt.toFormat('d')}</div>            {/* 22 */}
               </div>
 
              <div className="flex-1 p-4">

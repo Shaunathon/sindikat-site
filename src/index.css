@@ -11,8 +11,8 @@
 :root {
   --color-black-dark: #050401;
   --color-black: #2B2B31;
-  --color-blue-dark: #003C6E; /* Custom Primary Color */
-  --color-blue: #00648F; /* Custom Primary Color */
+  --color-blue-dark: #162C47; /* Custom Primary Color */
+  --color-blue: #003C6E; /* Custom Primary Color */
   --color-yellow-dark: #9B7624; /* Custom Secondary Color */
   --color-yellow: #DFAB29; /* Custom Secondary Color */
   --color-background: #050401; /* Background Color */
@@ -46,6 +46,10 @@ body {
   color: var(--color-yellow);
 }
 
+.text-pop {
+  color: var(--color-red);
+}
+
 .bg-secondary {
   background-color: var(--color-blue);
 }
@@ -67,8 +71,13 @@ body {
 }
 
 .bg-accent {
-  background-color: var(--color-yellow);
+  background-color: var(--color-red);
 }
+
+.bg-accent-dark {
+  background-color: var(--color-yellow-dark);
+}
+
 .text-text {
   color: var(--color-cream-dark);
 }
@@ -99,6 +108,26 @@ body {
 
 .font-header {
   font-family: "Bebas Neue", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-title {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.orbitron-<uniquifier> {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+.font-logo {
+  font-family: "Great Vibes", cursive;
   font-weight: 400;
   font-style: normal;
 }

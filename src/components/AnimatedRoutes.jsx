@@ -16,7 +16,8 @@ export default function AnimatedRoutes() {
     <Suspense fallback={<div className="text-center text-zinc-400">Loading...</div>}>
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Calendar />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/calendar" element={<Calendar />} />
           <Route path="/contact" element={<Contact />} />

@@ -11,14 +11,15 @@ const underlineTransition = {
 
 export default function Nav() {
   const location = useLocation();
-  const bgImage = getHeaderBackground(location.pathname);
+  const bgImage = '/images/header-bg.png';
   const [menuOpen, setMenuOpen] = useState(false);
   const [underlineStyle, setUnderlineStyle] = useState({ left: 0, width: 0 });
   const linkRefs = useRef({});
+  const containerRef = useRef(null);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   const navItems = [
-    { label: 'Home', to: '/' },
+    { label: 'Home', to: '/home' },
     { label: 'Calendar', to: '/calendar' },
     { label: 'About', to: '/about' },
     { label: 'Contact', to: '/contact' },
@@ -38,9 +39,10 @@ export default function Nav() {
   useEffect(() => {
   const activePath = location.pathname;
   const activeEl = linkRefs.current[activePath];
-  if (activeEl) {
+  const containerEl = containerRef.current;
+    if (activeEl && containerEl) {
     const rect = activeEl.getBoundingClientRect();
-    const containerRect = activeEl.parentNode.getBoundingClientRect();
+    const containerRect = containerEl.getBoundingClientRect();
     const left = rect.left - containerRect.left;
     const width = rect.width;
 
@@ -51,16 +53,27 @@ export default function Nav() {
 
   return (
     <nav className="sticky top-0 z-40 bg-cover bg-center bg-no-repeat md: bg-primary text-sm font-header relative transition-colors duration-300"
-    style={bgStyle}
+      style={bgStyle}
     >
-      <div className="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between md:justify-center relative bg-zinc-900/30">
+      <div className="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between md:justify-center relative"
+      >
+      {/* Mobile-only translucent overlay */}
+        {isMobile && (
+        <div className="absolute inset-0 bg-zinc-900/85 z-0" />
+        )}
+
         {/* Band name: only visible on md and smaller */}
-        <div className="block md:hidden text-primary font-bold text-xl drop-shadow-sm">
-          Sindikat Sina Roza
+        <div className="block md:hidden flex items-center space-x-2 z-10">
+          <span className="text-accent font-title text-lg">
+            sindikat
+          </span>
+          <span className="text-pop font-logo text-4xl">
+            Sina Roza
+          </span>
         </div>
 
         {/* Desktop nav links, centered */}
-        <div className="hidden md:flex gap-6 relative min-h-[1.5rem]">
+        <div ref={containerRef} className="hidden md:flex gap-6 relative min-h-[1.5rem]">
           {navItems.map(({ label, to }) => (
             <div
               key={to}
@@ -70,7 +83,7 @@ export default function Nav() {
               <NavLink
                 to={to}
                 className={
-                  location.pathname === to
+                  (to === '/calendar' && (location.pathname === '/' || location.pathname === '/calendar')) || location.pathname === to
                     ? 'text-xl text-accent font-header tracking-wide transition-all duration-300'
                     : 'text-xl text-secondary hover:text-white font-medium uppercase tracking-wide transition-all duration-300'
                 }
@@ -82,17 +95,21 @@ export default function Nav() {
 
           {/* Animated underline */}
           <motion.div
-            className="absolute bottom-0 h-0.5 bg-accent rounded"
+            className="absolute bottom-1 h-0.5 bg-accent rounded"
             animate={{ left: underlineStyle.left, width: underlineStyle.width }}
             transition={underlineTransition}
           />
-
+          <motion.div
+            className="absolute bottom-6 h-0.5 bg-accent rounded"
+            animate={{ left: underlineStyle.left, width: underlineStyle.width }}
+            transition={underlineTransition}
+          />
         </div>
 
         {/* Hamburger toggle: only visible on mobile, floats right */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden text-white  text-3xl px-3 drop-shadow-sm absolute right-4 z-50"
+          className="md:hidden text-accent  text-3xl px-3 drop-shadow-sm absolute right-4 z-50"
           aria-label="Toggle menu"
         >
           {menuOpen ? '✕' : '☰'}
@@ -129,9 +146,9 @@ export default function Nav() {
                   to={to}
                   onClick={() => setMenuOpen(false)}
                   className={({ isActive }) =>
-                    isActive
-                      ? 'block text-white text-lg bg-zinc-600 font-semibold uppercase tracking-wide rounded px-3 py-5'
-                      : 'block text-zinc-300 text-lg font-light uppercase tracking-wide hover:underline px-3 py-5'
+                    (to === '/calendar' && (location.pathname === '/' || location.pathname === '/calendar')) || isActive
+                      ? 'block text-accent text-2xl bg-primary bg-opacity-50 font-header uppercase tracking-wide rounded px-3 py-5'
+                      : 'block text-secondary text-2xl font-header uppercase tracking-wide hover:underline px-3 py-5'
                   }
                 >
                   {label}

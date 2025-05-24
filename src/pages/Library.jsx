@@ -6,8 +6,8 @@ import Fuse from 'fuse.js';
 function FilterDropdown({ label, options, selected, onChange }) {
   return (
     <div className="mb-4">
-      <details className="relative bg-secondary p-3 rounded shadow">
-        <summary className="cursor-pointer text-secondary font-body">{label}</summary>
+      <details className="relative bg-accent p-3 rounded shadow">
+        <summary className="cursor-pointer text-secondary font-body-bold">{label}</summary>
         <div className="absolute mt-2 left-0 w-48 bg-zinc-800/60 backdrop-blur-sm p-3 rounded shadow-lg z-50 space-y-1">
           {options.map((option) => (
             <label key={option} className="block text-sm font-body text-primary">
@@ -102,7 +102,7 @@ export default function Library() {
           ))}
 
           {selectedMeters.map((m) => (
-            <span key={`meter-${m}`} className="bg-accent text-primary font-body-bold text-sm px-3 py-1 rounded-full flex items-center">
+            <span key={`meter-${m}`} className="bg-blue-800 text-primary font-body-bold text-sm px-3 py-1 rounded-full flex items-center">
               {m}
               <button onClick={() => setSelectedMeters(selectedMeters.filter(item => item !== m))} className="ml-2">✕</button>
             </span>

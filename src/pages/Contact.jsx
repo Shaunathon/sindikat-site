@@ -35,9 +35,9 @@ export default function Contact() {
         <a
           href="/public/downloads/SindikatSinaRoza_PressKit.zip"
           download
-          className="inline-block mt-2 bg-secondary hover:bg-primary text-primary font-bodsy py-2 px-4 rounded"
+          className="inline-block mt-2 bg-accent hover:bg-primary text-primary font-body-bold py-2 px-4 rounded"
         >
-          Download Press Kit
+          Sina Roza Press Kit
         </a>
       </section>
     </motion.div>
