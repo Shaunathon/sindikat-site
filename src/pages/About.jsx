@@ -68,7 +68,18 @@ export default function About() {
 
               <h3 className="text-xl font-header text-accent">{member.name}</h3>
               <p className="text-md font-body text-primary">{member.role}</p>
-              <p className="mt-2 text-secondary font-body text-sm">{member.bio}</p>
+              <p className="mt-2 text-secondary font-body text-sm">
+                {member.bio.split(/\[REDACTED\]/g).map((part, index, arr) => (
+                  <>
+                    {part}
+                    {index < arr.length - 1 && (
+                      <span className="bg-black text-black rounded px-1">[REDACTED]</span>
+                    )}
+                  </>
+                ))}
+              </p>
+
+
             </div>
           ))}
         </div>

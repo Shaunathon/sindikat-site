@@ -132,6 +132,13 @@ body {
   font-style: normal;
 }
 
+.redacted-bar {
+  background-color: black;
+  color: black;
+  border-radius: 2px;
+  padding: 0 4px;
+}
+
 /*
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
