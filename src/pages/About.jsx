@@ -73,7 +73,7 @@ export default function About() {
                   <>
                     {part}
                     {index < arr.length - 1 && (
-                      <span className="bg-black text-black rounded px-1">[REDACTED]</span>
+                      <span className="bg-white text-zinc-300 rounded px-1">[REDACTED]</span>
                     )}
                   </>
                 ))}
