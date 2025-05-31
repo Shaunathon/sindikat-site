@@ -106,6 +106,15 @@ body {
   font-style: italic;
 }
 
+
+/*.font-header {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}*/
+
+
 .font-header {
   font-family: "Bebas Neue", serif;
   font-weight: 400;

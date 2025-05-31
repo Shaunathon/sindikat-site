@@ -61,16 +61,21 @@ export default function Nav() {
         {isMobile && (
         <div className="absolute inset-0 bg-zinc-900/80 backdrop-brightness-100 z-0" />
         )}
-
+          <img
+              src="/images/blue-rose.png"
+              alt="blue rose"
+              className="absolute inset-0 w-32 h-32 opacity-80 z-0 m-auto top-2 pointer-events-none object-contain"
+            />
         {/* Band name: only visible on md and smaller */}
-        <div className="block md:hidden flex items-center space-x-2 z-10">
-          <span className="text-accent font-title text-lg">
+        <div className="block md:hidden flex items-center justify-center space-x-2 z-10">
+          <span className="text-accent font-header text-lg z-10">
             sindikat
           </span>
-          <span className="text-pop font-logo text-4xl">
+          <span className="text-pop font-logo text-4xl z-10">
             Sina Roza
           </span>
         </div>
+
 
         {/* Desktop nav links, centered */}
         <div ref={containerRef} className="hidden md:flex gap-6 relative min-h-[1.5rem]">
