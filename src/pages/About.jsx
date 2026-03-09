@@ -60,7 +60,7 @@ export default function About() {
                 src={`/images/${member.name?.split(' ')[0]?.toLowerCase()}.jpg`}
                 onError={(e) => {
                  e.target.onerror = null;
-                 e.target.src = '/images/default-avatar.png';
+                 e.target.src = '/images/default-avatar.jpg';
                 }}
                 alt={member.name}
                 className="w-32 h-32 min-w-0 rounded-full object-cover mb-4"
