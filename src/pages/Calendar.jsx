@@ -65,9 +65,13 @@ export default function Calendar() {
             const dt = DateTime.fromJSDate(event.start);
 
             return (
-            <li key={index} className="bg-primary p-4 rounded shadow flex">
-              
-              <div className="w-16 shrink-0 bg-secondary text-center rounded-sm flex flex-col justify-center items-center p-2">
+            <li key={index} className="relative bg-[rgba(22,44,71,0.9)] backdrop-blur-md p-4 rounded-xl flex
+              border border-white/15
+              shadow-[0_8px_32px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.1),inset_0_-1px_0_rgba(0,0,0,0.3)]">
+
+              <div className="absolute left-4 right-4 top-[1px] h-px bg-gradient-to-r from-transparent via-white/20 to-transparent pointer-events-none" />
+
+              <div className="w-16 shrink-0 bg-[rgba(0,60,110,0.9)] border border-white/15 shadow-[inset_0_1px_0_rgba(255,255,255,0.15),inset_0_-1px_0_rgba(0,0,0,0.2)] text-center rounded flex flex-col justify-center items-center p-2">
                 <div className="text-sm font-header text-pop">{dt.toFormat('ccc')}</div>  {/* Sat */}
                 <div className="text-2xl tracking-wide font-header text-accent">{dt.toFormat('LLL')}</div>          {/* Jun */}
                 <div className="text-2xl font-header text-accent">{dt.toFormat('d')}</div>            {/* 22 */}

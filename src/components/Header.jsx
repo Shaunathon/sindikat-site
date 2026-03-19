@@ -13,7 +13,12 @@ export default function Header() {
     >
       <div className="absolute inset-0 bg-white/35 backdrop-brightness-125 z-0" />
 
-      <div className="relative z-10 bg-[rgba(3,1,4,0.75)] backdrop-blur-xs inline-block px-6 py-4 rounded-4xl border-2 border-[var(--color-cream-dark)]">
+      <div className="relative z-10 bg-[rgba(3,1,4,0.82)] backdrop-blur-md inline-block px-6 py-4 rounded-4xl
+        border border-white/15
+        shadow-[0_8px_32px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(255,255,255,0.12),inset_0_-1px_0_rgba(0,0,0,0.4)]">
+
+        <div className="absolute left-4 right-4 top-[1px] h-px bg-gradient-to-r from-transparent via-white/25 to-transparent pointer-events-none" />
+
         <img
           src="/images/blue-rose.png"
           alt="blue rose"

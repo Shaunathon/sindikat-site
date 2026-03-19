@@ -55,7 +55,11 @@ export default function About() {
         <h2 className="text-3xl font-header text-accent mb-6">Members</h2>
         <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
           {members.map((member) => (
-            <div key={member.name} className="bg-primary p-6 rounded-lg shadow text-center flex flex-col items-center">
+            <div key={member.name} className="relative bg-[rgba(22,44,71,0.9)] backdrop-blur-md p-6 rounded-xl
+              border border-white/15
+              shadow-[0_8px_32px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.1),inset_0_-1px_0_rgba(0,0,0,0.3)]
+              text-center flex flex-col items-center">
+              <div className="absolute left-4 right-4 top-[1px] h-px bg-gradient-to-r from-transparent via-white/20 to-transparent pointer-events-none" />
               <img
                 src={`/images/${member.name?.split(' ')[0]?.toLowerCase()}.jpg`}
                 onError={(e) => {

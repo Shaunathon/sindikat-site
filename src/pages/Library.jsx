@@ -115,7 +115,11 @@ export default function Library() {
 
         <ul className="mt-6 space-y-4 overflow-y-auto max-h-[60vh] pr-2 scrollbar-thin">
           {finalFiltered.map((song, idx) => (
-            <li key={idx} className="bg-primary p-4 rounded shadow text-white">
+            <li key={idx} className="relative bg-[rgba(22,44,71,0.9)] backdrop-blur-md p-4 rounded-xl
+              border border-white/15
+              shadow-[0_8px_32px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.1),inset_0_-1px_0_rgba(0,0,0,0.3)]
+              text-white">
+              <div className="absolute left-4 right-4 top-[1px] h-px bg-gradient-to-r from-transparent via-white/20 to-transparent pointer-events-none" />
               <h2 className="text-xl font-body-bold mb-1">{song.Song}</h2>
               <p className="text-sm text-secondary">
                 <strong>Nationality:</strong> {song.Nationality} <br />
