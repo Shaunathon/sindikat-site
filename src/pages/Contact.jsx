@@ -33,7 +33,7 @@ export default function Contact() {
           Download our press materials, including high-res photos, logo, and band bio.
         </p>
         <a
-          href="/public/downloads/SindikatSinaRoza_PressKit.zip"
+          href="/downloads/sina_roza_press_kit.pdf"
           download
           className="inline-block mt-2 bg-accent hover:bg-primary text-primary font-body-bold py-2 px-4 rounded"
         >
